@@ -1,0 +1,49 @@
+{
+    "tasks": [
+        {
+            "id": "task-3",
+            "title": "Create Wellness Blog Detail Screen",
+            "status": "pending",
+            "asignedAgent": "createScreenAgent",
+            "description": "Create a detailed blog reading screen with clean typography, share functionality, bookmark option, and related article suggestions. Include author information and publication date.",
+            "createdAt": "2024-01-15T10:30:00.000Z",
+            "updatedAt": "2024-01-15T10:30:00.000Z"
+        },
+        {
+            "id": "task-4",
+            "title": "Create Ayurvedic Food Recommendation Screen",
+            "status": "pending",
+            "asignedAgent": "createScreenAgent",
+            "description": "Create a comprehensive food recommendation screen with seasonal menus, dosha-specific diets, recipe details with ingredients and preparation steps, and nutritional information. Include shopping list functionality.",
+            "createdAt": "2024-01-15T10:30:00.000Z",
+            "updatedAt": "2024-01-15T10:30:00.000Z"
+        },
+        {
+            "id": "task-5",
+            "title": "Create Favorites Management Screen",
+            "status": "pending",
+            "asignedAgent": "createScreenAgent",
+            "description": "Create a dedicated favorites screen where users can view all saved techniques, articles, and recipes in categorized tabs. Include sorting options, search functionality, and bulk management features.",
+            "createdAt": "2024-01-15T10:30:00.000Z",
+            "updatedAt": "2024-01-15T10:30:00.000Z"
+        },
+        {
+            "id": "task-6",
+            "title": "Create Progress Analytics Dashboard",
+            "status": "pending",
+            "asignedAgent": "createScreenAgent",
+            "description": "Create a detailed analytics dashboard showing practice trends, streak history, time distribution across techniques, achievement badges, and personalized insights. Include export functionality for progress reports.",
+            "createdAt": "2024-01-15T10:30:00.000Z",
+            "updatedAt": "2024-01-15T10:30:00.000Z"
+        },
+        {
+            "id": "task-7",
+            "title": "Add Navigation to Home Screen",
+            "status": "pending",
+            "asignedAgent": "updateScreenAgent",
+            "description": "Enhance the home screen with bottom navigation for easy access to different sections: Home, Techniques, Progress, Resources, and Profile. Implement smooth transitions and active state indicators.",
+            "createdAt": "2024-01-15T10:30:00.000Z",
+            "updatedAt": "2024-01-15T10:30:00.000Z"
+        }
+    ]
+}
