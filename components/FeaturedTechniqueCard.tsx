@@ -22,7 +22,7 @@ export function FeaturedTechniqueCard({
     onPress
 }: FeaturedTechniqueCardProps) {
     return (
-        <View className="bg-white rounded-2xl shadow-sm w-64 relative">
+        <View className="bg-white rounded-2xl shadow-sm w-full relative">
             <Image
                 source={{ uri: technique.image }}
                 className="w-full h-36 rounded-t-2xl"

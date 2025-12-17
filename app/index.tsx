@@ -71,7 +71,11 @@ export default function HomeScreen() {
                     <Text className="text-xl font-bold text-gray-800 mb-4">Explore Practices</Text>
                     <View className="flex-row justify-between">
                         {categories.map((category) => (
-                            <CategoryCard key={category.id} category={category} />
+                            <CategoryCard
+                                key={category.id}
+                                category={category}
+                                onPress={() => router.push(`/category/${category.id}`)}
+                            />
                         ))}
                     </View>
                 </View>
@@ -88,13 +92,14 @@ export default function HomeScreen() {
                     <ScrollView horizontal showsHorizontalScrollIndicator={false} className="max-h-64">
                         <View className="flex-row gap-4">
                             {featuredTechniques.map((technique) => (
-                                <FeaturedTechniqueCard
-                                    key={technique.id}
-                                    technique={technique}
-                                    isFavorite={favorites.includes(technique.id)}
-                                    onToggleFavorite={() => toggleFavorite(technique.id)}
-                                    onPress={() => router.push(`/technique/${technique.id}`)}
-                                />
+                                <View key={technique.id} className="w-64">
+                                    <FeaturedTechniqueCard
+                                        technique={technique}
+                                        isFavorite={favorites.includes(technique.id)}
+                                        onToggleFavorite={() => toggleFavorite(technique.id)}
+                                        onPress={() => router.push(`/technique/${technique.id}`)}
+                                    />
+                                </View>
                             ))}
                         </View>
                     </ScrollView>
@@ -104,7 +109,10 @@ export default function HomeScreen() {
                 <View className="mb-6">
                     <View className="flex-row justify-between items-center mb-4">
                         <Text className="text-xl font-bold text-gray-800">Your Progress</Text>
-                        <TouchableOpacity className="flex-row items-center">
+                        <TouchableOpacity
+                            className="flex-row items-center"
+                            onPress={() => router.push('/progress')}
+                        >
                             <TrendingUp color="#8B9467" size={16} className="mr-1" />
                             <Text className="text-[#8B9467] font-medium">View Stats</Text>
                         </TouchableOpacity>

@@ -41,6 +41,23 @@ export const recentProgress = [
     { date: '2 days ago', technique: 'Bhramari', duration: '8 min', streak: 3 },
 ];
 
+export const weeklyStats = [
+    { label: 'Mon', value: 20 },
+    { label: 'Tue', value: 30 },
+    { label: 'Wed', value: 45 },
+    { label: 'Thu', value: 25 },
+    { label: 'Fri', value: 50 },
+    { label: 'Sat', value: 60 },
+    { label: 'Sun', value: 40 },
+];
+
+export const monthlyStats = [
+    { label: 'W1', value: 150 },
+    { label: 'W2', value: 220 },
+    { label: 'W3', value: 180 },
+    { label: 'W4', value: 250 },
+];
+
 export const blogPosts = [
     {
         id: '1',
@@ -97,6 +114,48 @@ export const foodRecommendations = {
         }
     ],
     avoid: ['Ice cold water', 'Raw salads at dinner', 'Processed sugar']
+};
+
+// Category Details Data
+export const categoryDetails: Record<string, any> = {
+    '1': {
+        id: '1',
+        title: 'Pranayama',
+        description: 'Control your breath, control your life. Explore ancient breathing techniques for vitality and peace.',
+        image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&auto=format&fit=crop',
+        techniques: [
+            { id: '1', title: 'Anulom Vilom', duration: '10 min', level: 'Beginner', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop' },
+            { id: '2', title: 'Kapalbhati', duration: '15 min', level: 'Intermediate', image: 'https://images.unsplash.com/photo-1635978792499-1065ae7e1f05?w=900&auto=format&fit=crop' },
+            { id: '3', title: 'Bhramari', duration: '8 min', level: 'Beginner', image: 'https://images.unsplash.com/photo-1604480133435-25b86862d276?w=900&auto=format&fit=crop' }
+        ]
+    },
+    '2': {
+        id: '2',
+        title: 'Asanas',
+        description: 'Strengthen your body and improve flexibility with these foundational yoga postures.',
+        image: 'https://images.unsplash.com/photo-1544367563-12123d8959bd?w=900&auto=format&fit=crop',
+        techniques: [
+            { id: '4', title: 'Surya Namaskar', duration: '15 min', level: 'Beginner', image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=900&auto=format&fit=crop' },
+            { id: '5', title: 'Warrior II', duration: '5 min', level: 'Beginner', image: 'https://images.unsplash.com/photo-1566501206188-5dd0cf160a0e?w=900&auto=format&fit=crop' }
+        ]
+    },
+    '3': {
+        id: '3',
+        title: 'Meditation',
+        description: 'Find inner stillness and clarity through guided mindfulness and meditation practices.',
+        image: 'https://images.unsplash.com/photo-1528319725582-ddc096101511?w=900&auto=format&fit=crop',
+        techniques: [
+            { id: '6', title: 'Mindfulness', duration: '20 min', level: 'All Levels', image: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=900&auto=format&fit=crop' },
+            { id: '7', title: 'Loving Kindness', duration: '15 min', level: 'Beginner', image: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&auto=format&fit=crop' }
+        ]
+    },
+    '4': {
+        id: '4',
+        title: 'Aahar',
+        description: 'Nourish your body with sattvic foods that promote healing and maintain balance.',
+        image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&auto=format&fit=crop',
+        techniques: [] // This will redirect to food recommendations mostly
+    }
 };
 
 // Dictionary of full technique details
