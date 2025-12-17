@@ -176,7 +176,10 @@ export default function HomeScreen() {
                 <View className="mb-6">
                     <View className="flex-row justify-between items-center mb-4">
                         <Text className="text-xl font-bold text-gray-800">Ayurvedic Recommendations</Text>
-                        <TouchableOpacity className="flex-row items-center">
+                        <TouchableOpacity
+                            className="flex-row items-center"
+                            onPress={() => router.push('/food-recommendations')}
+                        >
                             <Apple color="#FF6B6B" size={16} className="mr-1" />
                             <Text className="text-red-400 font-medium">View Menu</Text>
                         </TouchableOpacity>

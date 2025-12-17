@@ -58,6 +58,47 @@ export const blogPosts = [
     },
 ];
 
+// Food recommendations data
+export const foodRecommendations = {
+    dosha: 'Vata-Pitta',
+    season: 'Autumn (Vata Season)',
+    dailyMenu: [
+        {
+            time: 'Morning (6:00 AM - 9:00 AM)',
+            suggestion: 'Warm Lemon & Honey Water',
+            image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&h=300&fit=crop',
+            description: 'Starts digestion and cleanses the system.',
+            calories: '30 kcal',
+            tags: ['Detox', 'Hydration']
+        },
+        {
+            time: 'Breakfast (8:00 AM - 9:30 AM)',
+            suggestion: 'Warm Oatmeal with Dates & Almonds',
+            image: 'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=500&h=300&fit=crop',
+            description: 'Grounding food with natural sweetness.',
+            calories: '320 kcal',
+            tags: ['Sattvic', 'Grounding']
+        },
+        {
+            time: 'Lunch (12:00 PM - 1:30 PM)',
+            suggestion: 'Kitchari (Rice & Lentil Stew)',
+            image: 'https://images.unsplash.com/photo-1585937421612-70a008356f36?w=500&h=300&fit=crop',
+            description: 'Easy to digest complete protein.',
+            calories: '450 kcal',
+            tags: ['Tridoshic', 'Protein']
+        },
+        {
+            time: 'Dinner (6:30 PM - 7:30 PM)',
+            suggestion: 'Steamed Vegetables & Pumpkin Soup',
+            image: 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2b?w=500&h=300&fit=crop',
+            description: 'Light evening meal for better sleep.',
+            calories: '280 kcal',
+            tags: ['Light', 'Warm']
+        }
+    ],
+    avoid: ['Ice cold water', 'Raw salads at dinner', 'Processed sugar']
+};
+
 // Dictionary of full technique details
 export const techniques: Record<string, any> = {
     '1': {
