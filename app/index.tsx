@@ -147,6 +147,7 @@ export default function HomeScreen() {
                             <TouchableOpacity
                                 key={post.id}
                                 className="bg-white rounded-2xl shadow-sm flex-row overflow-hidden"
+                                onPress={() => router.push(`/blog/${post.id}` as any)}
                             >
                                 <Image
                                     source={{ uri: post.image }}

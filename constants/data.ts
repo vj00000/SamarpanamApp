@@ -148,3 +148,81 @@ export const techniques: Record<string, any> = {
         ]
     }
 };
+
+// Full blog post details
+export const blogDetails: Record<string, any> = {
+    '1': {
+        id: '1',
+        title: 'Benefits of Morning Pranayama',
+        author: 'Dr. Aditi Sharma',
+        date: 'Oct 15, 2023',
+        readTime: '5 min read',
+        image: 'https://images.unsplash.com/photo-1636714455535-7cb8e8b34790?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJvbWF0aGVyYXB5fGVufDB8fDB8fHww',
+        tags: ['Pranayama', 'Morning Routine', 'Wellness'],
+        content: [
+            {
+                type: 'paragraph',
+                text: 'Starting your day with Pranayama (breathing exercises) sets a positive tone for the entire day. Unlike coffee which gives you a temporary caffeine spike, pranayama provides sustained energy by oxygenating your blood and calming your nervous system.'
+            },
+            {
+                type: 'heading',
+                text: 'Why Morning is Best?'
+            },
+            {
+                type: 'paragraph',
+                text: 'In Ayurveda, the time before sunrise (Brahma Muhurta) is considered the most auspicious time for spiritual practices. The air is fresh, rich in oxygen (prana), and the mind is naturally calmer than at any other time of day.'
+            },
+            {
+                type: 'heading',
+                text: 'Top 3 Morning Practices'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Kapalbhati: To wake up the body and digestion.',
+                    'Nadi Shodhana: To balance the mind for the day ahead.',
+                    'Bhastrika: For a quick boost of energy if you feel sluggish.'
+                ]
+            },
+            {
+                type: 'quote',
+                text: '"Breath is the bridge which connects life to consciousness, which unites your body to your thoughts."'
+            }
+        ]
+    },
+    '2': {
+        id: '2',
+        title: 'Ayurvedic Diet for Yogis',
+        author: 'Chef Rajesh Kumar',
+        date: 'Nov 02, 2023',
+        readTime: '8 min read',
+        image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=300&fit=crop',
+        tags: ['Diet', 'Ayurveda', 'Sattvic'],
+        content: [
+            {
+                type: 'paragraph',
+                text: 'A Sattvic diet is essential for any serious yoga practitioner. It keeps the body light, the mind clear, and the spirit high. But what exactly does it entail?'
+            },
+            {
+                type: 'heading',
+                text: 'The 3 Gunas'
+            },
+            {
+                type: 'paragraph',
+                text: 'Food is categorized into three types based on the effect it has on the body and mind: Sattvic (pure), Rajasic (stimulating), and Tamasic (dull). Yogis aim to consume primarily Sattvic foods.'
+            },
+            {
+                type: 'list',
+                items: [
+                    'Sattvic: Fresh fruits, vegetables, whole grains, nuts, seeds, milk.',
+                    'Rajasic: Spicy foods, caffeine, refined sugars, chocolate.',
+                    'Tamasic: Processed foods, meat, alcohol, stale food.'
+                ]
+            },
+            {
+                type: 'paragraph',
+                text: 'By shifting your diet towards more fresh, plant-based, and lightly cooked meals, you can enhance your flexibility and meditation practice.'
+            }
+        ]
+    }
+};
