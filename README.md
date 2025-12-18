@@ -65,7 +65,7 @@ A comprehensive yoga assisting app offering guided pranayama techniques, video t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pranaflow-yoga.git
+   git clone https://github.com/vj00000/SamarpanamApp.git
    ```
 
 2. Navigate to the project directory:
