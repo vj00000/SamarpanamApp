@@ -44,7 +44,7 @@ export default function TechniqueDetailScreen() {
 
     // Timer effect
     useEffect(() => {
-        let interval: NodeJS.Timeout | null = null;
+        let interval: any = null;
 
         if (isPlaying && timeRemaining > 0) {
             interval = setInterval(() => {
