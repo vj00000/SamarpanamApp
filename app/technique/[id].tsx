@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Image, Dimensions, Alert } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { Play, Pause, RotateCcw, Volume2, Heart, ChevronLeft, Info } from 'lucide-react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { techniques } from '../../constants/data';
 import { VideoPlayer } from '../../components/VideoPlayer';
+import { BreathingVisualization } from '../../components/BreathingVisualization';
 
 const { width } = Dimensions.get('window');
 
@@ -95,6 +97,56 @@ export default function TechniqueDetailScreen() {
         );
     };
 
+    const [showControls, setShowControls] = useState(false);
+
+    if (isPlaying && technique.visualType === 'fire-gaze') {
+        return (
+            <TouchableOpacity
+                activeOpacity={1}
+                onPress={() => setShowControls(!showControls)}
+                className="flex-1 bg-black"
+            >
+                <StatusBar hidden={!showControls} style="light" />
+
+                <View className="flex-1 justify-center items-center">
+                    <View className="w-full h-full pointer-events-none">
+                        <BreathingVisualization ratio={technique.visualRatio} isFullScreen={true} />
+                    </View>
+                </View>
+
+                {/* Full Screen Overlay Controls - Only shown on tap */}
+                {showControls && (
+                    <>
+                        <View className="absolute top-0 left-0 right-0 p-6 pt-12 flex-row justify-between items-center">
+                            <TouchableOpacity
+                                onPress={() => setIsPlaying(false)}
+                                className="bg-white/10 p-2 rounded-full backdrop-blur-md"
+                            >
+                                <ChevronLeft color="white" size={28} />
+                            </TouchableOpacity>
+                            <View className="bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
+                                <Text className="text-white font-bold text-xl">{formatTime(timeRemaining)}</Text>
+                            </View>
+                            <View style={{ width: 44 }} />
+                        </View>
+
+                        <View className="absolute bottom-12 left-0 right-0 items-center">
+                            <TouchableOpacity
+                                onPress={toggleTimer}
+                                className="bg-red-500/80 w-16 h-16 rounded-full items-center justify-center backdrop-blur-md"
+                            >
+                                <Pause color="white" size={32} />
+                            </TouchableOpacity>
+                            <Text className="text-white/40 mt-4 font-medium tracking-widest uppercase text-[10px]">
+                                Tap anywhere to hide controls
+                            </Text>
+                        </View>
+                    </>
+                )}
+            </TouchableOpacity>
+        );
+    }
+
     return (
         <View className="flex-1 bg-slate-50">
             {/* Header */}
@@ -128,12 +180,18 @@ export default function TechniqueDetailScreen() {
                 className="flex-1 px-4 py-6"
                 showsVerticalScrollIndicator={false}
             >
-                {/* Technique Video */}
+                {/* Technique Video or Visualization */}
                 <View className="mb-6 rounded-2xl overflow-hidden shadow-sm">
-                    <VideoPlayer
-                        thumbnail={technique.image}
-                        duration={parseInt(technique.duration) * 60 || 600}
-                    />
+                    {technique.visualType === 'fire-gaze' ? (
+                        <View className="h-48">
+                            <BreathingVisualization ratio={technique.visualRatio} />
+                        </View>
+                    ) : (
+                        <VideoPlayer
+                            thumbnail={technique.image}
+                            duration={parseInt(technique.duration) * 60 || 600}
+                        />
+                    )}
                 </View>
 
                 {/* Timer Section */}

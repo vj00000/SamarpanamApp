@@ -10,6 +10,16 @@ export const categories = [
 
 export const featuredTechniques = [
     {
+        id: 'fire-gaze',
+        title: 'Fire Gaze Breath',
+        duration: '5 min',
+        level: 'Advanced',
+        image: '', // Visualization will be used instead
+        visualType: 'fire-gaze',
+        visualRatio: '4:4:4:4',
+        isFavorite: false
+    },
+    {
         id: '1',
         title: 'Anulom Vilom',
         duration: '10 min',
@@ -245,6 +255,37 @@ export const techniques: Record<string, any> = {
             'Do not practice lying down',
             'Avoid if you have an ear infection',
             'Practice gently without straining'
+        ]
+    },
+    'fire-gaze': {
+        id: 'fire-gaze',
+        title: 'Fire Gaze Breath',
+        subtitle: 'Agni Drishti Pranayama',
+        difficulty: 'Advanced',
+        duration: '5 minutes',
+        image: '',
+        visualType: 'fire-gaze',
+        visualRatio: '4:4:4:4',
+        description: 'An advanced visualization-based breathing technique that focuses on the internal fire (Agni) to purify the nadis and energize the body.',
+        steps: [
+            'Posture: Sit upright and relax your shoulders.',
+            'Focus: Keep eyes open, softly fixed on the yellow core.',
+            'Inhale: Breathe in as the fire expands and brightens.',
+            'Hold: Pause, feeling the warmth fill your body.',
+            'Exhale: Breathe out as the fire shrinks and fades.',
+            'Pause: Rest in the stillness of the dark void.',
+            'Repeat: Follow the rhythm to sustain your flow.'
+        ],
+        benefits: [
+            'Improves concentration and focus',
+            'Generates internal heat and vitality',
+            'Balances the Manipura (Solar Plexus) Chakra',
+            'Purifies the energy channels'
+        ],
+        precautions: [
+            'Avoid if you have high blood pressure',
+            'Do not practice if you feel over-agitated',
+            'Stop immediately if you feel lightheaded'
         ]
     }
 };
